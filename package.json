@@ -5,7 +5,11 @@
   "main": "out/index.js",
   "scripts": {
     "build": "babel src --out-dir out",
-    "dev": "babel src --out-dir out -w"
+    "dev": "babel src --out-dir out -w",
+    "prepublish": "npm run build"
+  },
+  "bin": {
+    "download-crx": "bind/download"
   },
   "repository": {
     "type": "git",
