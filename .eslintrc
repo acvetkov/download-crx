@@ -1,0 +1,16 @@
+{
+  "extends": "eslint:recommended",
+  "env": {
+    "node": true,
+    "mocha": true,
+    "es6": true
+  },
+  "ecmaFeatures": {
+    "modules": true
+  },
+  "globals": {
+    "chrome": false,
+    "assert": false,
+    "sinon": false
+  }
+}
