@@ -9,7 +9,7 @@
     "prepublish": "npm run build"
   },
   "bin": {
-    "download-crx": "bind/download"
+    "download-crx": "bin/download"
   },
   "repository": {
     "type": "git",
