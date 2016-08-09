@@ -51,6 +51,16 @@ export function downloadById(extensionId, savePath = __dirname, extensionName = 
 }
 
 /**
+ * Downloads extension
+ * @param {String} extensionId
+ * @returns {Promise<Buffer>}
+ */
+export function downloadBuffer(extensionId) {
+    return got(URL_PATTERN.replace('[EXTENSION_ID]', extensionId), headers)
+        .then(response => response.body);
+}
+
+/**
  * @param {String} extensionUrl
  * @returns {String}
  */
