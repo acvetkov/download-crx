@@ -56,8 +56,15 @@ export function downloadById(extensionId, savePath = __dirname, extensionName = 
  * @returns {Promise<Buffer>}
  */
 export function downloadBuffer(extensionId) {
-    return got(URL_PATTERN.replace('[EXTENSION_ID]', extensionId), headers)
-        .then(response => response.body);
+    const options = {
+        headers
+    };
+    return new Promise(resolve => {
+        const buffers = [];
+        got.stream(URL_PATTERN.replace('[EXTENSION_ID]', extensionId), options)
+            .on('data', chunk => buffers.push(chunk))
+            .on('end', () => resolve(Buffer.concat(buffers)));
+    });
 }
 
 /**

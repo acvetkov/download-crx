@@ -1,6 +1,6 @@
 {
   "name": "download-crx",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Download crx from Chrome WebStore",
   "main": "out/index.js",
   "scripts": {
