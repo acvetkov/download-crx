@@ -29,6 +29,7 @@ parser.addArgument(['-n', '--name'], {
 export default {
     download () {
         const args = parser.parseArgs();
-        return downloadUtils.download(args.url, __dirname, args.name || 'extension');
+        const savePath = process.cwd();
+        return downloadUtils.download(args.url, savePath, args.name || 'extension');
     }
 };
