@@ -34,6 +34,6 @@ export default {
         return downloadUtils
           .download(args.url, savePath, args.name || 'extension')
           .then(filePath => console.log(`Saved in ${filePath}`))
-          .catch(err => conole.log(err))
+          .catch(err => console.log(err))
     }
 };
