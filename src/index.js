@@ -10,7 +10,7 @@ import _ from 'lodash';
 import got from 'got';
 import URI from 'urijs';
 
-const URL_PATTERN = 'https://clients2.google.com/service/update2/crx?response=redirect&prodversion=38.0&x=id%3D[EXTENSION_ID]%26installsource%3Dondemand%26uc';
+const URL_PATTERN = 'https://update.googleapis.com/service/update2/crx?response=redirect&acceptformat=crx3&prodversion=38.0&testsource=download-crx&x=id%3D[EXTENSION_ID]%26installsource%3Dondemand%26uc';
 const USER_AGENT = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.84 Safari/537.36';
 
 const headers = {
